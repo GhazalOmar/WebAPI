@@ -1,0 +1,20 @@
+﻿
+@{
+    TempData["Title"] = "Method1";
+}
+
+<h1>Method1</h1>
+
+<p>There are @TempData["CustomerCount"] customers added to the list</p>
+<ul>
+    @foreach (var item in TempData["CustomerList"] as List<Customer>)
+    {
+        <li>@item.Id - @item.Name - @item.Amount</li>
+    }
+</ul>
+
+@{
+    TempData.Keep("Message");
+}
+
+<a asp-controller="CustomerController1" asp-action="Method2">Go to Method2</a>

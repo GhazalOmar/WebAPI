@@ -1,0 +1,34 @@
+﻿@model coreEntityFrameworkCodeFirstApproach.Models.Customer
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h2>Are you sure you want to delete this?</h2>
+
+<hr/>
+
+<dl class="row">
+    <dt  class="col-md-5">
+        @Html.DisplayNameFor(model => model.CustomerName)
+    </dt>
+    <dd class="col-md-10">
+        @Html.DisplayFor(model => model.CustomerName)
+    </dd>
+    <dt class="col-md-5">
+        @Html.DisplayNameFor(model => model.CustomerAmount)
+    </dt>
+    <dd class="col-md-10">
+        @Html.DisplayFor(model => model.CustomerAmount)
+    </dd>
+</dl>
+
+<div>
+    <form asp-action="Delete">
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        | 
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

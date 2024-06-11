@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<h2>@ViewData["Message"]</h2>
+
+<p>There are @ViewData["CustomerCount"] customers added to the list</p>
+<ul>
+    @foreach (var item in ViewData["CustomerList"] as List<Customer>)
+    {
+        <li>@item.Id - @item.Name - @item.Amount</li>
+    }
+</ul>
+
